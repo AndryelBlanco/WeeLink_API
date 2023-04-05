@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeLink_API", "WeeLink_API\WeeLink_API.csproj", "{31C8E76F-AB42-4B35-B7D3-B2B3F8530E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeLink_Infrastructure", "WeeLink_Infrastructure\WeeLink_Infrastructure.csproj", "{0ACCC54C-4750-494E-8B10-23553604B30A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeLink_Domain", "WeeLink_Domain\WeeLink_Domain.csproj", "{50968C5D-3223-459A-9A0A-7A421963BB5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{31C8E76F-AB42-4B35-B7D3-B2B3F8530E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C8E76F-AB42-4B35-B7D3-B2B3F8530E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C8E76F-AB42-4B35-B7D3-B2B3F8530E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACCC54C-4750-494E-8B10-23553604B30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACCC54C-4750-494E-8B10-23553604B30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACCC54C-4750-494E-8B10-23553604B30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACCC54C-4750-494E-8B10-23553604B30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50968C5D-3223-459A-9A0A-7A421963BB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50968C5D-3223-459A-9A0A-7A421963BB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50968C5D-3223-459A-9A0A-7A421963BB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50968C5D-3223-459A-9A0A-7A421963BB5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
