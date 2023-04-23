@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WeeLink_Infrastructure\WeeLink_Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Validations\ResourceErrorRegisterUser.Designer.cs">
       <DependentUpon>ResourceErrorRegisterUser.resx</DependentUpon>
       <DesignTime>True</DesignTime>

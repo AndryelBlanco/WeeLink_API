@@ -3258,13 +3258,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "FluentValidation": "11.5.2"
+          "FluentValidation": "11.5.2",
+          "WeeLink_Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/WeeLink_Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/WeeLink_Domain.dll": {}
+        }
+      },
+      "WeeLink_Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeeLink_Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeeLink_Infrastructure.dll": {}
         }
       }
     }
@@ -10094,6 +10105,11 @@
       "type": "project",
       "path": "../WeeLink_Domain/WeeLink_Domain.csproj",
       "msbuildProject": "../WeeLink_Domain/WeeLink_Domain.csproj"
+    },
+    "WeeLink_Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../WeeLink_Infrastructure/WeeLink_Infrastructure.csproj",
+      "msbuildProject": "../WeeLink_Infrastructure/WeeLink_Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
