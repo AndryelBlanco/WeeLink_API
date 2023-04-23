@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WeeLink_API.Utils.Context;
 using WeeLink_Domain.Entities.User;
+using WeeLink_Domain.UseCases;
 using WeeLink_Domain.Validations;
 
 namespace WeeLink_API.Controllers
@@ -41,28 +42,38 @@ namespace WeeLink_API.Controllers
         {
             if (inputData == null) return BadRequest("Não foi informado um usuário válido");
 
-            var inputedUser = new User()
+            try
             {
-                Id = Guid.NewGuid(),
-                Name = inputData.Name,
-                Email = inputData.Email,
-                Password = inputData.Password,
-                CreatedAt = DateTime.Now
-            };
+                var inputedUser = new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = inputData.Name,
+                    Email = inputData.Email,
+                    Password = inputData.Password,
+                    CreatedAt = DateTime.Now
+                };
 
-            var validator = new UserValidation();
+                var registerUseCase = new UserRegisterUseCase();
 
-            var result = validator.Validate(inputedUser);
+                var result = registerUseCase.ValidateUserRegister(inputedUser);
 
-            if (!result.IsValid)
-            {
-                return BadRequest(result.Errors);
+                if (!result.IsValid)
+                {
+                    return BadRequest(result.Errors);
+                }
+
+                inputedUser = registerUseCase.EncryptUserPassword(inputedUser);
+
+                _contextDb.User.Add(inputedUser);
+                _contextDb.SaveChanges();
+
+                return Ok();
+
             }
-
-            _contextDb.User.Add(inputedUser);
-            _contextDb.SaveChanges();
-
-            return Ok();
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
